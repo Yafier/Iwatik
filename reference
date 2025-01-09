@@ -1,0 +1,31 @@
+To recreate the landing page layout you shared in Cursor AI, follow these instructions to build the HTML and CSS structure step-by-step:
+
+---
+
+1. **Set Up the Layout**: 
+   - Create a main container (`div`) that will hold all the elements for the landing page.
+   - Inside this container, add sections for the "MENU" and "SOUND ON" buttons, the centered title text, the images, and the footer text.
+
+2. **Position Elements**:
+   - Place the "MENU" text in the top-left corner and "SOUND ON" in the top-right corner using absolute positioning.
+   - Center the main title text ("LOEWE FOUNDATION CRAFT PRIZE") in the middle of the page. Use large, bold text and align it to the center for emphasis.
+   - Position the images around the main title using absolute positioning. Each image should be in a fixed location relative to the main title, spread across the page for a balanced visual effect.
+   - Add a footer at the bottom that reads "SCROLL TO EXPLORE."
+
+3. **Style the Images**:
+   - Use square or rectangular `div` elements as placeholders for each image.
+   - Assign each `div` a background image that corresponds to each artwork in your design. Set the background to cover the entire `div`, ensuring it fills the space without distortion.
+   - Adjust the size and placement of each image `div` based on the design to give a scattered, collage-like layout around the main title text.
+
+4. **Add Fonts and Colors**:
+   - Use a simple, clean font like Arial or Helvetica for the text to keep the design minimalistic and modern.
+   - Use black or dark gray text color to contrast with the white background.
+   - Set the background color of the entire page to white to match the minimalistic look.
+
+5. **Make the Layout Responsive** (Optional):
+   - For a better experience on various screen sizes, add responsive CSS to adjust the image positions and sizes.
+   - Consider making the title text slightly smaller on mobile and repositioning the images to prevent overlapping.
+
+6. **Add Animation Effects (Optional)**:
+   - For added interactivity, consider adding subtle hover effects on the images (e.g., scaling up slightly when hovered).
+   - You could also add a smooth scroll animation that highlights the footer message "SCROLL TO EXPLORE" as users scroll down.
