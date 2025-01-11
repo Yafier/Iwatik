@@ -1,5 +1,3 @@
-import Image from "next/image";
-
 export default function Hero() {
   return (
     <section className="relative min-h-screen flex flex-col items-center justify-center bg-cream px-8 pt-32 pb-16 overflow-hidden">

@@ -1,5 +1,3 @@
-import Image from "next/image";
-
 export default function CaseStudies() {
   return (
     <section className="relative min-h-screen flex items-center bg-cream px-8 py-24">
