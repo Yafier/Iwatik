@@ -4,11 +4,11 @@ export default function Problem() {
   const collections = [
     { src: "/men.jpg", title: "" },
     { src: "/woman.jpg", title: "" },
-    { src: "/acc.jpg", title: "" },
+    { src: "/acc.JPG", title: "" },
     { src: "/new.jpeg", title: "" },
     { src: "/col5.jpeg", title: "" },
     { src: "/col7.jpeg", title: "" },
-    { src: "/col6.jpg", title: "" },
+    { src: "/col6.JPG", title: "" },
     { src: "/col.jpg", title: "" },
   ];
 
