@@ -13,7 +13,10 @@ export default function Problem() {
   ];
 
   return (
-    <section className="min-h-screen bg-cream py-24">
+    <section className="relative min-h-screen bg-cream py-24">
+      {/* Top Divider */}
+      <div className="absolute top-0 left-0 w-full border-t border-earthBrown/20"></div>
+
       {/* Title Section */}
       <div className="max-w-7xl mx-auto px-8 mb-16">
         <h2 className="text-4xl md:text-5xl font-bold text-deepBrown text-center">
@@ -42,6 +45,9 @@ export default function Problem() {
           ))}
         </div>
       </div>
+
+      {/* Bottom Divider */}
+      <div className="absolute bottom-0 left-0 w-full border-b border-earthBrown/20"></div>
     </section>
   );
 } 

@@ -1,135 +1,124 @@
 import Image from "next/image";
 
 export default function Solution() {
+  const products = [
+    {
+      id: 1,
+      name: "Kimono Batik Pria",
+      price: "Rp 650.000",
+      image: "/1.jpeg"
+    },
+    {
+      id: 2,
+      name: "Kimono Batik Pria",
+      price: "Rp 650.000",
+      image: "/2.jpeg"
+    },
+    {
+      id: 3,
+      name: "Nusantara Modern Fit Fungus",
+      price: "Rp ...",
+      image: "/1.jpeg"
+    },
+    {
+      id: 4,
+      name: "My Modern Fit Stag Beetle",
+      price: "Rp ...",
+      image: "/1.jpeg"
+    },
+    {
+      id: 5,
+      name: "Kemeja Oversize Wanita",
+      price: "Rp 650.000",
+      image: "/5.jpeg"
+    },
+    {
+      id: 6,
+      name: "Kemeja Oversize Wanita",
+      price: "Rp 650.000",
+      image: "/6.jpeg"
+    },
+    {
+      id: 7,
+      name: "Heritage Batik Series",
+      price: "Rp ...",
+      image: "/1.jpeg"
+    },
+    {
+      id: 8,
+      name: "Contemporary Batik Design",
+      price: "Rp ...",
+      image: "/1.jpeg"
+    },
+    {
+      id: 9,
+      name: "Premium Batik Collection",
+      price: "Rp ...",
+      image: "/1.jpeg"
+    },
+    {
+      id: 10,
+      name: "Exclusive Batik Edition",
+      price: "Rp ...",
+      image: "/1.jpeg"
+    },
+    {
+      id: 11,
+      name: "Luxury Batik Series",
+      price: "Rp ...",
+      image: "/1.jpeg"
+    },
+    {
+      id: 12,
+      name: "Elite Batik Collection",
+      price: "Rp ...",
+      image: "/1.jpeg"
+    }
+  ];
+
   return (
-    <section className="min-h-screen bg-cream py-16">
+    <section className="relative min-h-screen bg-white py-16">
+      {/* Top Divider */}
+      <div className="absolute top-0 left-0 w-full border-t border-earthBrown/20"></div>
+
       {/* Header Section */}
-      <div className="text-center mb-8">
-        <h2 className="text-2xl font-bold mb-2">NEW ARRIVAL</h2>
-        <p className="text-gray-600">VIEW ALL</p>
+      <div className="text-center mb-12">
+        <h2 className="text-2xl font-bold text-deepBrown mb-2">OUR PRODUCT</h2>
+        <p className="text-earthBrown">2025</p>
       </div>
 
-      {/* Product Carousel */}
-      <div className="relative max-w-[90%] mx-auto">
-        {/* Navigation Arrows */}
-        <button className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-12 z-10">
-          <span className="text-2xl">←</span>
-        </button>
-        <button className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-12 z-10">
-          <span className="text-2xl">→</span>
-        </button>
-
+      {/* Product Grid Container */}
+      <div className="max-w-[90%] mx-auto">
         {/* Products Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
-          {/* Product Card 1 */}
-          <div className="group">
-            <div className="relative aspect-[3/4] mb-4">
-              <div className="absolute top-2 left-2 bg-black text-white text-xs px-2 py-1 z-10">
-                NEW IN
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
+          {products.map((product) => (
+            <div key={product.id} className="flex flex-col">
+              <div className="relative aspect-[4/5] mb-4 rounded-lg overflow-hidden">
+                <Image
+                  src={product.image}
+                  alt={product.name}
+                  fill
+                  className="object-cover"
+                  sizes="(max-width: 640px) 90vw, (max-width: 1024px) 45vw, (max-width: 1280px) 30vw, 23vw"
+                />
               </div>
-              <Image
-                src="/tes 1.jpg"
-                alt="Product 1"
-                fill
-                className="object-cover"
-                sizes="(max-width: 768px) 100vw, 25vw"
-              />
-              <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity bg-black/20">
-                <button className="bg-white text-black px-4 py-2 text-sm">
-                  QUICK BUY
-                </button>
-              </div>
+              <h3 className="font-medium mb-2 text-lg">{product.name}</h3>
+              <p className="font-bold mb-4 text-lg">{product.price}</p>
+              <a 
+                href="#"
+                className="bg-deepBrown text-cream text-center px-6 py-3 rounded-full
+                         text-sm font-medium transition-all duration-300
+                         hover:bg-earthBrown mt-auto"
+              >
+                Buy Now
+              </a>
             </div>
-            <h3 className="font-medium mb-2">Maharaja Modern Fit Eight Petals</h3>
-            <div className="flex items-center gap-2 mb-2">
-              <span>★★★★★</span>
-              <span className="text-sm text-gray-600">(1) Reviews</span>
-            </div>
-            <p className="font-bold">RM269.00</p>
-          </div>
-
-          {/* Product Card 2 */}
-          <div className="group">
-            <div className="relative aspect-[3/4] mb-4">
-              <div className="absolute top-2 left-2 bg-black text-white text-xs px-2 py-1 z-10">
-                NEW IN
-              </div>
-              <Image
-                src="/tes 2.jpg"
-                alt="Product 2"
-                fill
-                className="object-cover"
-                sizes="(max-width: 768px) 100vw, 25vw"
-              />
-              <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity bg-black/20">
-                <button className="bg-white text-black px-4 py-2 text-sm">
-                  QUICK BUY
-                </button>
-              </div>
-            </div>
-            <h3 className="font-medium mb-2">My Slim Fit Lantern Petals</h3>
-            <div className="flex items-center gap-2 mb-2">
-              <span>★★★★★</span>
-              <span className="text-sm text-gray-600">(2) Reviews</span>
-            </div>
-            <p className="font-bold">RM199.00</p>
-          </div>
-
-          {/* Product Card 3 */}
-          <div className="group">
-            <div className="relative aspect-[3/4] mb-4">
-              <div className="absolute top-2 left-2 bg-black text-white text-xs px-2 py-1 z-10">
-                NEW IN
-              </div>
-              <Image
-                src="/tes 3.jpg"
-                alt="Product 3"
-                fill
-                className="object-cover"
-                sizes="(max-width: 768px) 100vw, 25vw"
-              />
-              <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity bg-black/20">
-                <button className="bg-white text-black px-4 py-2 text-sm">
-                  QUICK BUY
-                </button>
-              </div>
-            </div>
-            <h3 className="font-medium mb-2">Nusantara Modern Fit Fungus</h3>
-            <div className="flex items-center gap-2 mb-2">
-              <span>★★★★★</span>
-              <span className="text-sm text-gray-600">(1) Reviews</span>
-            </div>
-            <p className="font-bold">RM289.00</p>
-          </div>
-
-          {/* Product Card 4 */}
-          <div className="group">
-            <div className="relative aspect-[3/4] mb-4">
-              <div className="absolute top-2 left-2 bg-black text-white text-xs px-2 py-1 z-10">
-                NEW IN
-              </div>
-              <Image
-                src="/tes 4.jpg"
-                alt="Product 4"
-                fill
-                className="object-cover"
-                sizes="(max-width: 768px) 100vw, 25vw"
-              />
-              <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity bg-black/20">
-                <button className="bg-white text-black px-4 py-2 text-sm">
-                  QUICK BUY
-                </button>
-              </div>
-            </div>
-            <h3 className="font-medium mb-2">My Modern Fit Stag Beetle</h3>
-            <div className="flex items-center gap-2 mb-2">
-              <span>★★★★★</span>
-              <span className="text-sm text-gray-600">(2) Reviews</span>
-            </div>
-            <p className="font-bold">RM179.00</p>
-          </div>
+          ))}
         </div>
       </div>
+
+      {/* Bottom Divider */}
+      <div className="absolute bottom-0 left-0 w-full border-b border-earthBrown/20"></div>
     </section>
   );
 } 
