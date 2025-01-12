@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 export default function CTA() {
   return (
     <section className="relative min-h-screen flex items-center bg-cream px-4 sm:px-8 py-16 sm:py-24">
@@ -52,10 +54,11 @@ export default function CTA() {
               
               {/* Main Image */}
               <div className="rounded-3xl overflow-hidden shadow-xl">
-                <img
+                <Image
                   src="/tes 2.jpg"
                   alt="Batik Collection"
-                  className="w-full h-full object-cover"
+                  layout="fill"
+                  className="object-cover"
                 />
               </div>
             </div>
