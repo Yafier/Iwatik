@@ -16,9 +16,9 @@ export default function Solution() {
     },
     {
       id: 3,
-      name: "Nusantara Modern Fit Fungus",
-      price: "Rp ...",
-      image: "/1.jpeg"
+      name: "Setelan Pria",
+      price: "Rp 1.050.000",
+      image: "/men.jpg"
     },
     {
       id: 4,
@@ -40,21 +40,21 @@ export default function Solution() {
     },
     {
       id: 7,
-      name: "Heritage Batik Series",
-      price: "Rp ...",
-      image: "/1.jpeg"
+      name: "Dress Wanita",
+      price: "Rp 1.050.000",
+      image: "/dress.jpg"
     },
     {
       id: 8,
-      name: "Contemporary Batik Design",
-      price: "Rp ...",
-      image: "/1.jpeg"
+      name: "Blouse Wanita",
+      price: "Rp 1.050.000",
+      image: "/woman.jpg"
     },
     {
       id: 9,
-      name: "Premium Batik Collection",
-      price: "Rp ...",
-      image: "/1.jpeg"
+      name: "Atasan Wanita",
+      price: "Rp 1.050.000",
+      image: "/photo.jpg"
     },
     {
       id: 10,
