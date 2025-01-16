@@ -18,7 +18,7 @@ export default function CTA() {
 
             {/* Quote */}
             <blockquote className="text-earthBrown text-xl sm:text-2xl italic font-serif mt-8">
-              "Embracing tradition through contemporary design. Every piece tells a story of Indonesian craftsmanship."
+              &quot;Embracing tradition through contemporary design. Every piece tells a story of Indonesian craftsmanship.&quot;
             </blockquote>
 
             {/* CTA Button */}
@@ -53,11 +53,11 @@ export default function CTA() {
               </div>
               
               {/* Main Image */}
-              <div className="rounded-3xl overflow-hidden shadow-xl">
+              <div className="rounded-3xl overflow-hidden shadow-xl relative aspect-[3/4]">
                 <Image
                   src="/tes 2.jpg"
                   alt="Batik Collection"
-                  layout="fill"
+                  fill
                   className="object-cover"
                 />
               </div>
