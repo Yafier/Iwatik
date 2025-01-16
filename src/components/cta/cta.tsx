@@ -58,7 +58,9 @@ export default function CTA() {
                   src="/tes 2.jpg"
                   alt="Batik Collection"
                   fill
+                  sizes="(max-width: 768px) 100vw, 50vw"
                   className="object-cover"
+                  priority
                 />
               </div>
             </div>

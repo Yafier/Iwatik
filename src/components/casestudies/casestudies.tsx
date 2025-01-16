@@ -10,13 +10,14 @@ export default function CaseStudies() {
         <div className="flex flex-col lg:flex-row gap-8 lg:gap-16 items-center">
           {/* Left Side - Single Image */}
           <div className="w-full lg:w-2/5 relative">
-            <div className="rounded-3xl overflow-hidden shadow-lg aspect-[3/4]">
+            <div className="rounded-3xl overflow-hidden shadow-lg aspect-[3/4] relative">
               <Image
                 src="/ini.gif"
                 alt="Batik Design"
-                width={500}
-                height={700}
-                className="object-cover w-full h-full"
+                fill
+                sizes="(max-width: 768px) 100vw, 40vw"
+                className="object-cover"
+                priority
               />
             </div>
           </div>
