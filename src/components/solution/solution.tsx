@@ -22,7 +22,7 @@ export default function Solution() {
     },
     {
       id: 4,
-      name: "Blouse Wanita",
+      name: "Dress Wanita",
       price: "Rp 1.050.000",
       image: "/kemejawanita4.jpg"
     },
@@ -46,13 +46,13 @@ export default function Solution() {
     },
     {
       id: 8,
-      name: "Blouse Wanita",
+      name: "Dress Wanita",
       price: "Rp 1.050.000",
       image: "/woman.jpg"
     },
     {
       id: 9,
-      name: "Atasan Wanita",
+      name: "Dress Wanita",
       price: "Rp 1.050.000",
       image: "/photo.jpg"
     },
