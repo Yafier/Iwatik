@@ -9,56 +9,54 @@ export default function CTA() {
       <div className="max-w-7xl mx-auto w-full">
         <div className="flex flex-col lg:flex-row gap-8 lg:gap-16 items-center">
           {/* Left Side Content */}
-          <div className="w-full lg:w-1/2 space-y-6">
-            {/* Main Heading */}
+          <div className="w-full lg:w-3/5 space-y-6">
             <h2 className="font-serif italic text-4xl sm:text-5xl lg:text-6xl font-normal text-deepBrown leading-tight">
               Discover Our
               <span className="block">Batik Heritage</span>
             </h2>
 
-            {/* Quote */}
             <blockquote className="text-earthBrown text-xl sm:text-2xl italic font-serif mt-8">
               &quot;Embracing tradition through contemporary design. Every piece tells a story of Indonesian craftsmanship.&quot;
             </blockquote>
 
-            {/* CTA Button */}
             <a 
               href="https://linktr.ee/iwatikbalikpapan"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-block bg-deepBrown text-cream px-12 py-4 rounded-full 
-                       text-lg font-medium mt-8 shadow-lg
-                       hover:bg-earthBrown transition-all duration-300"
+              className="inline-block bg-deepBrown text-cream 
+                       px-8 sm:px-12 py-3 sm:py-4 rounded-full 
+                       text-base sm:text-lg font-medium mt-6 sm:mt-8 shadow-lg
+                       hover:bg-earthBrown transition-all duration-300
+                       w-[200px] sm:w-auto"
             >
               Explore Collection
             </a>
 
-            {/* Limited spots text */}
-            <p className="text-earthBrown text-sm mt-4">
+            <p className="text-earthBrown text-xs sm:text-sm mt-3 sm:mt-4">
               Experience the art of batik - Visit our collection today
             </p>
           </div>
 
-          {/* Right Side Image */}
-          <div className="w-full lg:w-1/2">
-            <div className="relative">
-              {/* Success Stats Overlay */}
-              <div className="absolute top-4 right-4 bg-cream px-3 py-1 rounded-xl shadow-lg">
-                <p className="text-sm sm:text-lg font-bold text-deepBrown">500+</p>
-                <p className="text-xs sm:text-sm text-earthBrown">Unique Designs</p>
+          {/* Right Side Image - Reduced Size */}
+          <div className="w-full lg:w-2/5">
+            <div className="relative max-w-sm mx-auto">
+              {/* Success Stats Overlay - Adjusted Size */}
+              <div className="absolute top-3 right-3 bg-cream px-2.5 py-1 rounded-lg shadow-lg z-10">
+                <p className="text-sm font-bold text-deepBrown">500+</p>
+                <p className="text-xs text-earthBrown">Unique Designs</p>
               </div>
-              <div className="absolute bottom-4 left-4 bg-cream px-3 py-1 rounded-xl shadow-lg">
-                <p className="text-sm sm:text-lg font-bold text-deepBrown">6+</p>
-                <p className="text-xs sm:text-sm text-earthBrown">Years of Heritage</p>
+              <div className="absolute bottom-3 left-3 bg-cream px-2.5 py-1 rounded-lg shadow-lg z-10">
+                <p className="text-sm font-bold text-deepBrown">6+</p>
+                <p className="text-xs text-earthBrown">Years of Heritage</p>
               </div>
               
-              {/* Main Image */}
-              <div className="rounded-3xl overflow-hidden shadow-xl relative aspect-[3/4]">
+              {/* Main Image - More Compact */}
+              <div className="rounded-2xl overflow-hidden shadow-xl relative aspect-[3/4]">
                 <Image
                   src="/tes 2.jpg"
                   alt="Batik Collection"
                   fill
-                  sizes="(max-width: 768px) 100vw, 50vw"
+                  sizes="(max-width: 768px) 100vw, 40vw"
                   className="object-cover"
                   priority
                 />

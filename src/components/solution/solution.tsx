@@ -22,9 +22,9 @@ export default function Solution() {
     },
     {
       id: 4,
-      name: "My Modern Fit Stag Beetle",
-      price: "Rp ...",
-      image: "/1.jpeg"
+      name: "Blouse Wanita",
+      price: "Rp 1.050.000",
+      image: "/kemejawanita4.jpg"
     },
     {
       id: 5,
@@ -58,21 +58,21 @@ export default function Solution() {
     },
     {
       id: 10,
-      name: "Exclusive Batik Edition",
-      price: "Rp ...",
-      image: "/1.jpeg"
+      name: "Kemeja Wanita",
+      price: "Rp 550.000",
+      image: "/kemejawanita.jpeg"
     },
     {
       id: 11,
-      name: "Luxury Batik Series",
-      price: "Rp ...",
-      image: "/1.jpeg"
+      name: "Kemeja Wanita",
+      price: "Rp 550.000",
+      image: "/kemejawanita2.jpeg"
     },
     {
       id: 12,
-      name: "Elite Batik Collection",
-      price: "Rp ...",
-      image: "/1.jpeg"
+      name: "Kemeja Wanita",
+      price: "Rp 550.000",
+      image: "/kemejawanita3.jpeg"
     }
   ];
 
