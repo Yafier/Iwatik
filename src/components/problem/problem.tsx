@@ -1,7 +1,4 @@
-'use client';
-
 import Image from "next/image";
-import { useEffect, useRef } from "react";
 
 export default function Problem() {
   const collections = [
@@ -15,36 +12,13 @@ export default function Problem() {
     { src: "/col.jpg", title: "" },
   ];
 
-  useEffect(() => {
-    const observerOptions = {
-      root: null,
-      rootMargin: '0px',
-      threshold: 0.1
-    };
-
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('show');
-          observer.unobserve(entry.target);
-        }
-      });
-    }, observerOptions);
-
-    document.querySelectorAll('.fade-in').forEach((el) => {
-      observer.observe(el);
-    });
-
-    return () => observer.disconnect();
-  }, []);
-
   return (
     <section className="relative min-h-screen bg-cream py-24">
       {/* Top Divider */}
       <div className="absolute top-0 left-0 w-full border-t border-earthBrown/20"></div>
 
       {/* Title Section */}
-      <div className="max-w-7xl mx-auto px-8 mb-16 fade-in">
+      <div className="max-w-7xl mx-auto px-8 mb-16">
         <h2 className="text-4xl md:text-5xl font-bold text-deepBrown text-center">
           DISCOVER OUR COLLECTION
         </h2>
@@ -56,11 +30,8 @@ export default function Problem() {
           {collections.map((item, index) => (
             <div 
               key={index}
-              className="relative aspect-[4/5] overflow-hidden fade-in"
-              style={{ 
-                minHeight: '400px',
-                transitionDelay: `${index * 200}ms`
-              }}
+              className="relative aspect-[4/5] overflow-hidden"
+              style={{ minHeight: '400px' }}
             >
               <Image
                 src={item.src}
@@ -77,19 +48,6 @@ export default function Problem() {
 
       {/* Bottom Divider */}
       <div className="absolute bottom-0 left-0 w-full border-b border-earthBrown/20"></div>
-
-      <style jsx global>{`
-        .fade-in {
-          opacity: 0;
-          transform: translateY(20px);
-          transition: opacity 0.6s ease-out, transform 0.6s ease-out;
-        }
-
-        .fade-in.show {
-          opacity: 1;
-          transform: translateY(0);
-        }
-      `}</style>
     </section>
   );
 } 
