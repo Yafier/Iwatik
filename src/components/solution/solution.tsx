@@ -76,6 +76,15 @@ export default function Solution() {
     }
   ];
 
+  const handleWhatsAppClick = (product: { name: string; price: string }) => {
+    const phoneNumber = "62181346376436";
+    const message = encodeURIComponent(
+      `Hi, I'm interested in purchasing:\n\n${product.name}\nPrice: ${product.price}`
+    );
+    const whatsappUrl = `https://wa.me/${phoneNumber}?text=${message}`;
+    window.open(whatsappUrl, '_blank');
+  };
+
   return (
     <section className="relative min-h-screen bg-white py-16">
       {/* Top Divider */}
@@ -104,14 +113,14 @@ export default function Solution() {
               </div>
               <h3 className="font-medium mb-2 text-lg">{product.name}</h3>
               <p className="font-bold mb-4 text-lg">{product.price}</p>
-              <a 
-                href="#"
+              <button 
+                onClick={() => handleWhatsAppClick(product)}
                 className="bg-deepBrown text-cream text-center px-6 py-3 rounded-full
                          text-sm font-medium transition-all duration-300
                          hover:bg-earthBrown mt-auto"
               >
                 Buy Now
-              </a>
+              </button>
             </div>
           ))}
         </div>
