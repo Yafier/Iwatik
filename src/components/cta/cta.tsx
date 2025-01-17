@@ -12,7 +12,7 @@ export default function CTA() {
           <div className="w-full lg:w-3/5 space-y-6">
             <h2 className="font-serif italic text-4xl sm:text-5xl lg:text-6xl font-normal text-deepBrown leading-tight">
               Discover Our
-              <span className="block">Batik Heritage</span>
+              <span className="block">Batik Borneo Heritage</span>
             </h2>
 
             <blockquote className="text-earthBrown text-xl sm:text-2xl italic font-serif mt-8">

@@ -22,7 +22,7 @@ export default function Hero() {
           <span className="block mt-2">Since 2017</span>
         </h1>
         <p className="text-base sm:text-lg md:text-xl text-white max-w-2xl mx-auto font-light leading-relaxed px-4 sm:px-0">
-          Discover the uniqueness of Indonesian culture through our batik collection that blends tradition with contemporary trends. Elegance in batik for every special moment
+          Discover the uniqueness of Indonesian culture through our <span className="font-bold">BATIK BORNEO</span> collection that blends tradition with contemporary trends. Elegance in batik for every special moment
         </p>
       </div>
 

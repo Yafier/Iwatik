@@ -6,75 +6,99 @@ export default function Solution() {
   const products = [
     {
       id: 1,
-      name: "Kimono Batik Pria",
+      name: "Men's Batik Kimono",
       price: "Rp 650.000",
-      image: "/1.jpeg"
+      image: "/MBK-black.jpeg"
     },
     {
       id: 2,
-      name: "Kimono Batik Pria",
+      name: "Men's Batik Kimono",
       price: "Rp 650.000",
-      image: "/2.jpeg"
+      image: "/MBK-brown.jpeg"
     },
     {
       id: 3,
-      name: "Setelan Pria",
+      name: "Men's Suit",
       price: "Rp 1.050.000",
-      image: "/men.jpg"
+      image: "/MS-yellow.jpg"
     },
     {
       id: 4,
-      name: "Dress Wanita",
+      name: "Women's Dress Coin Charm",
       price: "Rp 1.050.000",
-      image: "/kemejawanita4.jpg"
+      image: "/WDC-pink.jpg"
     },
     {
       id: 5,
-      name: "Kemeja Oversize Wanita",
+      name: "Women's Oversize Shirt",
       price: "Rp 650.000",
-      image: "/5.jpeg"
+      image: "/WOS-green.jpeg"
     },
     {
       id: 6,
-      name: "Kemeja Oversize Wanita",
+      name: "Women's Oversize Shirt",
       price: "Rp 650.000",
-      image: "/6.jpeg"
+      image: "/WOS-brown.jpeg"
     },
     {
       id: 7,
-      name: "Dress Wanita",
+      name: "Women's Dress Coin Charm",
       price: "Rp 1.050.000",
-      image: "/dress.jpg"
+      image: "/WDC-brown.jpg"
     },
     {
       id: 8,
-      name: "Dress Wanita",
+      name: "Women's Dress Coin Charm",
       price: "Rp 1.050.000",
-      image: "/woman.jpg"
+      image: "/WDC-green.jpg"
     },
     {
       id: 9,
-      name: "Dress Wanita",
+      name: "Women's Dress Coin Charm",
       price: "Rp 1.050.000",
-      image: "/photo.jpg"
+      image: "/WDC-mint.jpg"
     },
     {
       id: 10,
-      name: "Kemeja Wanita",
+      name: "Women's Shirt",
       price: "Rp 550.000",
-      image: "/kemejawanita.jpeg"
+      image: "/WS-orange.jpeg"
     },
     {
       id: 11,
-      name: "Kemeja Wanita",
+      name: "Women's Shirt",
       price: "Rp 550.000",
-      image: "/kemejawanita2.jpeg"
+      image: "/WS-blue.jpeg"
     },
     {
       id: 12,
-      name: "Kemeja Wanita",
+      name: "Women's Shirt",
       price: "Rp 550.000",
-      image: "/kemejawanita3.jpeg"
+      image: "/WS-yellow-red.jpeg"
+    },
+    {
+      id: 13,
+      name: "Women's Dress Coin Charm",
+      price: "Rp 1.050.000",
+      image: "/WDC-green-mint.jpeg"
+    },
+    {
+      id: 14,
+      name: "Women's Oversize Shirt",
+      price: "Rp 550.000",
+      image: "/WOS-black.jpeg"
+    },
+    {
+      id: 15,
+      name: "Women's Blouse",
+      price: "Rp 650.000",
+      image: "/WB-blue.jpeg"
+    },
+    {
+      id: 16,
+      name: "Women's Blouse",
+      price: "Rp 650.000",
+      image: "/WB-yellow.jpeg"
     }
   ];
 

@@ -28,7 +28,7 @@ export default function CaseStudies() {
               Search for an idea?
             </h2>
             <p className="text-lg text-earthBrown font-light max-w-2xl lg:max-w-none mx-auto mb-8">
-              What do you want to try next? Think of something you&apos;re into—like &quot;modern batik fashion&quot;—and see what you find.
+              What do you want to try next? Think of something you&apos;re into—like &quot;modern BATIK BORNEO fashion&quot;—and see what you find.
             </p>
             <a 
               href="https://linktr.ee/iwatikbalikpapan?utm_source=linktree_admin_share"
@@ -39,7 +39,7 @@ export default function CaseStudies() {
                        hover:bg-earthBrown hover:scale-105
                        focus:outline-none focus:ring-2 focus:ring-deepBrown focus:ring-offset-2"
             >
-              Learn More
+              Find Your Style
             </a>
           </div>
         </div>
