@@ -1,7 +1,6 @@
 "use client";
 
 import Image from "next/image";
-import { useEffect } from "react";
 
 export default function Problem() {
   const collections = [
@@ -15,36 +14,13 @@ export default function Problem() {
     { src: "/col.jpg", title: "" },
   ];
 
-  useEffect(() => {
-    if (typeof window !== 'undefined') {
-      const observer = new IntersectionObserver(
-        (entries) => {
-          entries.forEach((entry) => {
-            if (entry.isIntersecting) {
-              entry.target.classList.add('show');
-            }
-          });
-        },
-        {
-          threshold: 0.1,
-          rootMargin: '-50px',
-        }
-      );
-
-      const hiddenElements = document.querySelectorAll('.fade-in');
-      hiddenElements.forEach((el) => observer.observe(el));
-
-      return () => observer.disconnect();
-    }
-  }, []);
-
   return (
     <section className="relative min-h-screen bg-white py-24">
       {/* Top Divider */}
       <div className="absolute top-0 left-0 w-full border-t border-earthBrown/20"></div>
 
       {/* Title Section */}
-      <div className="max-w-7xl mx-auto px-8 mb-16 fade-in">
+      <div className="max-w-7xl mx-auto px-8 mb-16">
         <h2 className="text-4xl md:text-5xl font-bold text-deepBrown text-center">
           DISCOVER OUR COLLECTION
         </h2>
@@ -56,11 +32,8 @@ export default function Problem() {
           {collections.map((item, index) => (
             <div 
               key={index}
-              className="relative aspect-[4/5] overflow-hidden fade-in"
-              style={{ 
-                minHeight: '400px',
-                transitionDelay: `${index * 0.2}s`
-              }}
+              className="relative aspect-[4/5] overflow-hidden"
+              style={{ minHeight: '400px' }}
             >
               <Image
                 src={item.src}
