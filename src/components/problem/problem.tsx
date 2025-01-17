@@ -1,3 +1,5 @@
+'use client';
+
 import Image from "next/image";
 import { useEffect, useRef } from "react";
 
@@ -24,12 +26,11 @@ export default function Problem() {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
           entry.target.classList.add('show');
-          observer.unobserve(entry.target); // Stop observing once shown
+          observer.unobserve(entry.target);
         }
       });
     }, observerOptions);
 
-    // Observe all elements with fade-in class
     document.querySelectorAll('.fade-in').forEach((el) => {
       observer.observe(el);
     });
@@ -77,7 +78,6 @@ export default function Problem() {
       {/* Bottom Divider */}
       <div className="absolute bottom-0 left-0 w-full border-b border-earthBrown/20"></div>
 
-      {/* Add these styles to your global CSS file */}
       <style jsx global>{`
         .fade-in {
           opacity: 0;
