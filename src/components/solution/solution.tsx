@@ -78,10 +78,11 @@ export default function Solution() {
     }
   ];
 
-  const handleWhatsAppClick = (product: { name: string; price: string }) => {
-    const phoneNumber = "62181346376436";
+  const handleWhatsAppClick = (product: { name: string; price: string; image: string }) => {
+    const phoneNumber = "6281346376436";
+    const imageUrl = `https://iwatik.vercel.app${product.image}`;
     const message = encodeURIComponent(
-      `Hi, I'm interested in purchasing:\n\n${product.name}\nPrice: ${product.price}`
+      `Halo kak, aku tertarik dengan produk ini :\n\n${product.name}\nPrice: ${product.price}\n\nProduct Image: ${imageUrl}`
     );
     const whatsappUrl = `https://wa.me/${phoneNumber}?text=${message}`;
     window.open(whatsappUrl, '_blank');
