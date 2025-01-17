@@ -16,28 +16,30 @@ export default function Problem() {
   ];
 
   useEffect(() => {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add('show');
-          }
-        });
-      },
-      {
-        threshold: 0.1,
-        rootMargin: '-50px',
-      }
-    );
+    if (typeof window !== 'undefined') {
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add('show');
+            }
+          });
+        },
+        {
+          threshold: 0.1,
+          rootMargin: '-50px',
+        }
+      );
 
-    const hiddenElements = document.querySelectorAll('.fade-in');
-    hiddenElements.forEach((el) => observer.observe(el));
+      const hiddenElements = document.querySelectorAll('.fade-in');
+      hiddenElements.forEach((el) => observer.observe(el));
 
-    return () => observer.disconnect();
+      return () => observer.disconnect();
+    }
   }, []);
 
   return (
-    <section className="relative min-h-screen bg-cream py-24">
+    <section className="relative min-h-screen bg-white py-24">
       {/* Top Divider */}
       <div className="absolute top-0 left-0 w-full border-t border-earthBrown/20"></div>
 
@@ -54,7 +56,7 @@ export default function Problem() {
           {collections.map((item, index) => (
             <div 
               key={index}
-              className={`relative aspect-[4/5] overflow-hidden fade-in`}
+              className="relative aspect-[4/5] overflow-hidden fade-in"
               style={{ 
                 minHeight: '400px',
                 transitionDelay: `${index * 0.2}s`
