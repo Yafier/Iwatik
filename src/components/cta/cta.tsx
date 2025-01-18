@@ -42,7 +42,7 @@ export default function CTA() {
             <div className="relative max-w-sm mx-auto">
               {/* Success Stats Overlay - Adjusted Size */}
               <div className="absolute top-3 right-3 bg-cream px-2.5 py-1 rounded-lg shadow-lg z-10">
-                <p className="text-sm font-bold text-deepBrown">500+</p>
+                <p className="text-sm font-bold text-deepBrown">Custom</p>
                 <p className="text-xs text-earthBrown">Unique Designs</p>
               </div>
               <div className="absolute bottom-3 left-3 bg-cream px-2.5 py-1 rounded-lg shadow-lg z-10">
