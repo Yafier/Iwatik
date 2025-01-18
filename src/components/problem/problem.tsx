@@ -4,8 +4,8 @@ import Image from "next/image";
 
 export default function Problem() {
   const collections = [
-    { src: "/men.jpg", title: "" },
-    { src: "/woman.jpg", title: "" },
+    { src: "/MS-yellow.jpg", title: "" },
+    { src: "/WDC-green.jpg", title: "" },
     { src: "/acc.JPG", title: "" },
     { src: "/new.jpeg", title: "" },
     { src: "/col5.jpeg", title: "" },

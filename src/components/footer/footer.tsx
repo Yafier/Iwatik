@@ -8,19 +8,19 @@ export default function Footer() {
       
       {/* Logo Container */}
       <div className="flex justify-center items-center">
-        <div className="w-16 h-16 relative">
+        <div className="w-40 h-39 relative">
           <Image
-            src="/logoiwatik.png"
+            src="/iwatikicon.png"
             alt="IWATIK Logo"
-            width={120}
-            height={120}
+            width={800}
+            height={800}
             className="object-contain"
           />
         </div>
       </div>
 
       {/* Copyright Text */}
-      <p className="text-center text-xs text-earthBrown mt-2">
+      <p className="text-center text-xs text-earthBrown -mt-1">
         © 2024 IWATIK BALIKPAPAN. All rights reserved.
       </p>
     </footer>
