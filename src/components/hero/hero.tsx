@@ -52,7 +52,7 @@ export default function Hero() {
             <div className="flex flex-col space-y-4">
               <div className="aspect-[4/3] relative overflow-hidden rounded-lg">
                 <Image 
-                  src="/images/work-elegance.jpg" 
+                  src="/F1.jpeg" 
                   alt="Professional wearing Batik at work" 
                   fill
                   className="object-cover"
@@ -73,7 +73,7 @@ export default function Hero() {
             <div className="flex flex-col space-y-4">
               <div className="aspect-[4/3] relative overflow-hidden rounded-lg">
                 <Image 
-                  src="/images/outdoor-style.jpg" 
+                  src="/F2.jpeg" 
                   alt="Couple wearing Batik outdoors" 
                   fill
                   className="object-cover"
@@ -94,7 +94,7 @@ export default function Hero() {
             <div className="flex flex-col space-y-4">
               <div className="aspect-[4/3] relative overflow-hidden rounded-lg">
                 <Image 
-                  src="/images/runway-elegance.jpg" 
+                  src="/F-3.jpg" 
                   alt="Model wearing Batik on runway" 
                   fill
                   className="object-cover"
