@@ -4,6 +4,33 @@ import Image from "next/image";
 import { useState } from "react";
 
 export default function Solution() {
+  // Move the state declarations to the top level
+  const [currentIndices, setCurrentIndices] = useState<{ [key: string]: number }>({
+    "Men's Collection": 0,
+    "Women's Collection": 0,
+    "Batik Tulis Collection": 0
+  });
+
+  const itemsPerPage = 4;
+
+  const scrollLeft = (category: string) => {
+    if (currentIndices[category] - itemsPerPage >= 0) {
+      setCurrentIndices({
+        ...currentIndices,
+        [category]: currentIndices[category] - itemsPerPage
+      });
+    }
+  };
+
+  const scrollRight = (category: string, maxLength: number) => {
+    if (currentIndices[category] + itemsPerPage < maxLength) {
+      setCurrentIndices({
+        ...currentIndices,
+        [category]: currentIndices[category] + itemsPerPage
+      });
+    }
+  };
+
   const products = [
     {
       id: 1,
@@ -323,34 +350,22 @@ export default function Solution() {
       <div className="max-w-[90%] mx-auto">
         {categories.map((category) => {
           const filteredProducts = products.filter(product => product.category === category);
-          const [currentIndex, setCurrentIndex] = useState(0);
-          const itemsPerPage = 4;
-
-          const scrollLeft = () => {
-            if (currentIndex - itemsPerPage >= 0) {
-              setCurrentIndex(currentIndex - itemsPerPage);
-            }
-          };
-
-          const scrollRight = () => {
-            if (currentIndex + itemsPerPage < filteredProducts.length) {
-              setCurrentIndex(currentIndex + itemsPerPage);
-            }
-          };
+          const currentIndex = currentIndices[category];
 
           return (
             <div key={category} className="mb-12">
               <h2 className="text-2xl font-bold text-deepBrown mb-4">{category}</h2>
               <div className="flex items-center">
                 <button 
-                  onClick={scrollLeft}
+                  onClick={() => scrollLeft(category)}
                   disabled={currentIndex === 0}
                   className="bg-deepBrown text-cream px-4 py-2 rounded disabled:opacity-50 mr-2"
                 >
-                  &lt; {/* Left Arrow */}
+                  &lt;
                 </button>
                 <div className="overflow-hidden">
-                  <div className="flex transition-transform duration-300" style={{ transform: `translateX(-${(currentIndex / itemsPerPage) * 100}%)` }}>
+                  <div className="flex transition-transform duration-300" 
+                       style={{ transform: `translateX(-${(currentIndex / itemsPerPage) * 100}%)` }}>
                     {filteredProducts.map((product) => (
                       <div key={product.id} className="flex-shrink-0 w-full sm:w-1/2 lg:w-1/3 xl:w-1/4 p-2 relative">
                         <div className="flex flex-col">
@@ -385,11 +400,11 @@ export default function Solution() {
                   </div>
                 </div>
                 <button 
-                  onClick={scrollRight}
+                  onClick={() => scrollRight(category, filteredProducts.length)}
                   disabled={currentIndex + itemsPerPage >= filteredProducts.length}
                   className="bg-deepBrown text-cream px-4 py-2 rounded disabled:opacity-50 ml-2"
                 >
-                  &gt; {/* Right Arrow */}
+                  &gt;
                 </button>
               </div>
             </div>
