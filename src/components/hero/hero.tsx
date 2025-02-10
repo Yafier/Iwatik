@@ -1,3 +1,5 @@
+import Image from 'next/image';
+
 export default function Hero() {
   return (
     <>
@@ -40,7 +42,7 @@ export default function Hero() {
               Versetile Elegance for Every Moment
             </h2>
             <p className="text-deepBrown/90 text-lg max-w-3xl mx-auto">
-              Step into timeless style with Iwatik Borneo, where tradition meets modern sophistication. Whether you're conquering the day at the office, enjoying a well-deserved vacation, or embracing the outdoors while working remotely.
+              Step into timeless style with Iwatik Borneo, where tradition meets modern sophistication. Whether you&apos;re conquering the day at the office, enjoying a well-deserved vacation, or embracing the outdoors while working remotely.
             </p>
           </div>
 
@@ -49,10 +51,11 @@ export default function Hero() {
             {/* Feature 1 */}
             <div className="flex flex-col space-y-4">
               <div className="aspect-[4/3] relative overflow-hidden rounded-lg">
-                <img 
-                  src="F1.jpeg" 
+                <Image 
+                  src="/images/work-elegance.jpg" 
                   alt="Professional wearing Batik at work" 
-                  className="object-cover w-full h-full"
+                  fill
+                  className="object-cover"
                 />
               </div>
               <div className="space-y-2">
@@ -69,10 +72,11 @@ export default function Hero() {
             {/* Feature 2 */}
             <div className="flex flex-col space-y-4">
               <div className="aspect-[4/3] relative overflow-hidden rounded-lg">
-                <img 
-                  src="F2.jpeg" 
+                <Image 
+                  src="/images/outdoor-style.jpg" 
                   alt="Couple wearing Batik outdoors" 
-                  className="object-cover w-full h-full"
+                  fill
+                  className="object-cover"
                 />
               </div>
               <div className="space-y-2">
@@ -81,7 +85,7 @@ export default function Hero() {
                   Relaxed & Stylish Outdoors
                 </h3>
                 <p className="text-deepBrown/80">
-                  Whether you're strolling through nature or exploring new destinations, our breathable fabrics and contemporary designs ensure both comfort and sophistication.
+                  Whether you&apos;re strolling through nature or exploring new destinations, our breathable fabrics and contemporary designs ensure both comfort and sophistication.
                 </p>
               </div>
             </div>
@@ -89,10 +93,11 @@ export default function Hero() {
             {/* Feature 3 */}
             <div className="flex flex-col space-y-4">
               <div className="aspect-[4/3] relative overflow-hidden rounded-lg">
-                <img 
-                  src="F-3.jpg" 
+                <Image 
+                  src="/images/runway-elegance.jpg" 
                   alt="Model wearing Batik on runway" 
-                  className="object-cover w-full h-full"
+                  fill
+                  className="object-cover"
                 />
               </div>
               <div className="space-y-2">
