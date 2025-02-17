@@ -46,7 +46,7 @@ export default function Solution() {
       price: "Rp 899.000",
       image: "/BHK-2.jpg",
       category: "Men's Collection",
-      soldOut: false
+      soldOut: true
     },
     {
       id: 3,
@@ -62,7 +62,7 @@ export default function Solution() {
       price: "Rp 899.000",
       image: "/BHK-4.JPEG",
       category: "Men's Collection",
-      soldOut: false
+      soldOut: true
     },
     {
       id: 5,
@@ -222,7 +222,7 @@ export default function Solution() {
       price: "Rp 499.000",
       image: "/BPBV-6.jpg",
       category: "Women's Collection",
-      soldOut: false
+      soldOut: true
     },
     {
       id: 25,
@@ -230,7 +230,7 @@ export default function Solution() {
       price: "Rp 599.000",
       image: "/BPBV-7.jpg",
       category: "Women's Collection",
-      soldOut: false
+      soldOut: true
     },
     {
       id: 26,
