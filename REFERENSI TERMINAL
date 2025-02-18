@@ -1,0 +1,3 @@
+- Command untuk commit -
+git add . && git commit -m "isi pesan"
+

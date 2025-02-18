@@ -1,9 +1,33 @@
 "use client";
 
 import Image from "next/image";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 export default function Solution() {
+  // Add banner images array
+  const bannerImages = [
+    "/banner1.jpg",
+    "/banner2.jpg",
+    "/banner3.jpg",
+    "/banner4.jpg",
+    "/banner5.jpg",
+    "/banner6.jpg",
+  ];
+
+  // Add state for banner
+  const [currentBannerIndex, setCurrentBannerIndex] = useState(0);
+
+  // Add useEffect for banner auto-slide
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setCurrentBannerIndex((prevIndex) => 
+        prevIndex === bannerImages.length - 1 ? 0 : prevIndex + 1
+      );
+    }, 3000);
+
+    return () => clearInterval(timer);
+  }, []);
+
   // Move the state declarations to the top level
   const [currentIndices, setCurrentIndices] = useState<{ [key: string]: number }>({
     "Men's Collection": 0,
@@ -11,22 +35,38 @@ export default function Solution() {
     "Batik Tulis Collection": 0
   });
 
-  const itemsPerPage = 4;
+  // Add state for tracking screen width
+  const [isMobile, setIsMobile] = useState(false);
+
+  // Add useEffect to detect mobile screen
+  useEffect(() => {
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth < 640); // 640px is the sm breakpoint in Tailwind
+    };
+    
+    checkMobile(); // Initial check
+    window.addEventListener('resize', checkMobile);
+    
+    return () => window.removeEventListener('resize', checkMobile);
+  }, []);
+
+  // Modify itemsPerPage to be dynamic based on screen size
+  const itemsPerPage = isMobile ? 1 : 4;
 
   const scrollLeft = (category: string) => {
-    if (currentIndices[category] - itemsPerPage >= 0) {
+    if (currentIndices[category] > 0) {
       setCurrentIndices({
         ...currentIndices,
-        [category]: currentIndices[category] - itemsPerPage
+        [category]: currentIndices[category] - (isMobile ? 1 : itemsPerPage)
       });
     }
   };
 
   const scrollRight = (category: string, maxLength: number) => {
-    if (currentIndices[category] + itemsPerPage < maxLength) {
+    if (currentIndices[category] + (isMobile ? 1 : itemsPerPage) < maxLength) {
       setCurrentIndices({
         ...currentIndices,
-        [category]: currentIndices[category] + itemsPerPage
+        [category]: currentIndices[category] + (isMobile ? 1 : itemsPerPage)
       });
     }
   };
@@ -290,7 +330,7 @@ export default function Solution() {
     },
     {
       id: 33,
-      name: "Hornbill Birds Motif Batik Tulis",
+      name: "Hornbill Motif Batik Tulis",
       price: "Rp 899.000",
       image: "/BT-6.jpeg",
       category: "Batik Tulis Collection",
@@ -336,10 +376,7 @@ export default function Solution() {
   const categories = ["Men's Collection", "Women's Collection", "Batik Tulis Collection"];
 
   return (
-    <section className="relative min-h-screen bg-white py-16">
-      {/* Top Divider */}
-      <div className="absolute top-0 left-0 w-full border-t border-earthBrown/20"></div>
-
+    <section className="relative min-h-screen bg-white pt-16 pb-0">
       {/* Header Section */}
       <div className="text-center mb-12">
         <h2 className="text-2xl font-bold text-deepBrown mb-2">OUR PRODUCT</h2>
@@ -364,10 +401,22 @@ export default function Solution() {
                   &lt;
                 </button>
                 <div className="overflow-hidden">
-                  <div className="flex transition-transform duration-300" 
-                       style={{ transform: `translateX(-${(currentIndex / itemsPerPage) * 100}%)` }}>
+                  <div 
+                    className="flex transition-transform duration-300" 
+                    style={{ 
+                      transform: `translateX(-${currentIndex * (isMobile ? 100 : 25)}%)`,
+                      gap: isMobile ? '0' : '8px' 
+                    }}
+                  >
                     {filteredProducts.map((product) => (
-                      <div key={product.id} className="flex-shrink-0 w-full sm:w-1/2 lg:w-1/3 xl:w-1/4 p-2 relative">
+                      <div 
+                        key={product.id} 
+                        className={`flex-shrink-0 ${
+                          isMobile 
+                            ? 'w-full' 
+                            : 'w-full sm:w-1/2 lg:w-1/3 xl:w-1/4'
+                        } p-2 relative`}
+                      >
                         <div className="flex flex-col">
                           <div className="relative aspect-[4/5] mb-4 rounded-lg overflow-hidden">
                             <Image
@@ -401,7 +450,7 @@ export default function Solution() {
                 </div>
                 <button 
                   onClick={() => scrollRight(category, filteredProducts.length)}
-                  disabled={currentIndex + itemsPerPage >= filteredProducts.length}
+                  disabled={currentIndex + (isMobile ? 1 : itemsPerPage) >= filteredProducts.length}
                   className="bg-deepBrown text-cream px-4 py-2 rounded disabled:opacity-50 ml-2"
                 >
                   &gt;
@@ -412,8 +461,24 @@ export default function Solution() {
         })}
       </div>
 
-      {/* Bottom Divider */}
-      <div className="absolute bottom-0 left-0 w-full border-b border-earthBrown/20"></div>
+      {/* Banner Section - Moved to bottom */}
+      <div className="relative w-full aspect-[21/9] mt-8">
+        {bannerImages.map((image, index) => (
+          <div
+            key={image}
+            className="absolute w-full h-full transition-opacity duration-1000"
+            style={{ opacity: index === currentBannerIndex ? 1 : 0 }}
+          >
+            <Image
+              src={image}
+              alt={`Banner ${index + 1}`}
+              fill
+              className="object-contain"
+              priority={index === 0}
+            />
+          </div>
+        ))}
+      </div>
     </section>
   );
 } 
