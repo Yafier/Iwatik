@@ -1,3 +1,4 @@
+'use client';
 import Image from 'next/image';
 
 export default function Hero() {
@@ -34,14 +35,14 @@ export default function Hero() {
       </section>
 
       {/* New Features Section */}
-      <section className="bg-sage-600 px-4 sm:px-8 py-16 sm:py-24">
+      <section className="bg-[#5f706d] px-4 sm:px-8 py-16 sm:py-24">
         <div className="max-w-7xl mx-auto">
           {/* Header */}
           <div className="text-center mb-16">
-            <h2 className="font-serif text-4xl sm:text-5xl text-deepBrown mb-4">
+            <h2 className="font-serif text-4xl sm:text-5xl text-white mb-4">
               Versetile Elegance for Every Moment
             </h2>
-            <p className="text-deepBrown/90 text-lg max-w-3xl mx-auto">
+            <p className="text-white/90 text-lg max-w-3xl mx-auto">
               Step into timeless style with Iwatik Borneo, where tradition meets modern sophistication. Whether you&apos;re conquering the day at the office, enjoying a well-deserved vacation, or embracing the outdoors while working remotely.
             </p>
           </div>
@@ -59,11 +60,11 @@ export default function Hero() {
                 />
               </div>
               <div className="space-y-2">
-                <h3 className="text-2xl text-deepBrown flex items-center gap-2">
+                <h3 className="text-2xl text-white flex items-center gap-2">
                   <span className="text-green-300">🌿</span>
                   Effortlessly Chic at Work
                 </h3>
-                <p className="text-deepBrown/80">
+                <p className="text-white/80">
                   Elevate your professional look with intricate batik patterns that exude elegance and confidence in any workspace.
                 </p>
               </div>
@@ -80,11 +81,11 @@ export default function Hero() {
                 />
               </div>
               <div className="space-y-2">
-                <h3 className="text-2xl text-deepBrown flex items-center gap-2">
+                <h3 className="text-2xl text-white flex items-center gap-2">
                   <span className="text-yellow-300">☀️</span>
                   Relaxed & Stylish Outdoors
                 </h3>
-                <p className="text-deepBrown/80">
+                <p className="text-white/80">
                   Whether you&apos;re strolling through nature or exploring new destinations, our breathable fabrics and contemporary designs ensure both comfort and sophistication.
                 </p>
               </div>
@@ -101,11 +102,11 @@ export default function Hero() {
                 />
               </div>
               <div className="space-y-2">
-                <h3 className="text-2xl text-deepBrown flex items-center gap-2">
+                <h3 className="text-2xl text-white flex items-center gap-2">
                   <span className="text-blue-300">👗</span>
                   Runway-Ready Elegance
                 </h3>
-                <p className="text-deepBrown/80">
+                <p className="text-white/80">
                   Designed with exquisite craftsmanship and bold artistry, our batik pieces are perfect for the spotlight, bringing cultural heritage to the modern fashion stage.
                 </p>
               </div>

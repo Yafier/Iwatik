@@ -6,12 +6,13 @@ import { useState, useEffect } from "react";
 export default function Solution() {
   // Add banner images array
   const bannerImages = [
-    "/banner1.jpg",
-    "/banner2.jpg",
-    "/banner3.jpg",
-    "/banner4.jpg",
-    "/banner5.jpg",
-    "/banner6.jpg",
+    "/ban1.jpg",
+    "/ban2.jpg",
+    "/ban3.jpg",
+    "/ban4.jpg",
+    "/ban5.jpg",
+    "/ban6.jpg",
+    "/ban7.jpg",
   ];
 
   // Add state for banner
@@ -32,7 +33,8 @@ export default function Solution() {
   const [currentIndices, setCurrentIndices] = useState<{ [key: string]: number }>({
     "Men's Collection": 0,
     "Women's Collection": 0,
-    "Batik Tulis Collection": 0
+    "Batik Tulis Collection": 0,
+    "Batik Printing Collection": 0
   });
 
   // Add state for tracking screen width
@@ -360,6 +362,46 @@ export default function Solution() {
       category: "Batik Tulis Collection",
       soldOut: false
     },
+    {
+      id: 37,
+      name: "Kelubut Motif Batik Printing",
+      price: "Rp 259.000",
+      image: "/BP1.jpeg",
+      category: "Batik Printing Collection",
+      soldOut: false
+    },
+    {
+      id: 38,
+      name: "Kelubut Motif Batik Printing",
+      price: "Rp 259.000",
+      image: "/BP2.jpeg",
+      category: "Batik Printing Collection",
+      soldOut: false
+    },
+    {
+      id: 39,
+      name: "Kelubut Motif Batik Printing",
+      price: "Rp 259.000",
+      image: "/BP3.jpeg",
+      category: "Batik Printing Collection",
+      soldOut: false
+    },
+    {
+      id: 40,
+      name: "Kelubut Motif Batik Printing",
+      price: "Rp 259.000",
+      image: "/BP4.jpeg",
+      category: "Batik Printing Collection",
+      soldOut: false
+    },
+    {
+      id: 41,
+      name: "Kelubut Motif Batik Printing",
+      price: "Rp 259.000",
+      image: "/BP5.jpeg",
+      category: "Batik Printing Collection",
+      soldOut: false
+    },
   ];
 
   const handleWhatsAppClick = (product: { name: string; price: string; image: string }) => {
@@ -373,14 +415,14 @@ export default function Solution() {
   };
 
   // Group products by category
-  const categories = ["Men's Collection", "Women's Collection", "Batik Tulis Collection"];
+  const categories = ["Men's Collection", "Women's Collection", "Batik Tulis Collection", "Batik Printing Collection"];
 
   return (
-    <section className="relative min-h-screen bg-white pt-16 pb-0">
+    <section className="relative min-h-screen bg-[#5f706d] pt-16 pb-0">
       {/* Header Section */}
       <div className="text-center mb-12">
-        <h2 className="text-2xl font-bold text-deepBrown mb-2">OUR PRODUCT</h2>
-        <p className="text-earthBrown">2025</p>
+        <h2 className="text-2xl font-bold text-white mb-2">OUR PRODUCT</h2>
+        <p className="text-white">2025</p>
       </div>
 
       {/* Product Grid Container */}
@@ -391,12 +433,12 @@ export default function Solution() {
 
           return (
             <div key={category} className="mb-12">
-              <h2 className="text-2xl font-bold text-deepBrown mb-4">{category}</h2>
+              <h2 className="text-2xl font-bold text-white mb-4">{category}</h2>
               <div className="flex items-center">
                 <button 
                   onClick={() => scrollLeft(category)}
                   disabled={currentIndex === 0}
-                  className="bg-deepBrown text-cream px-4 py-2 rounded disabled:opacity-50 mr-2"
+                  className="bg-[#f1ad4e] text-white px-4 py-2 rounded disabled:opacity-50 mr-2"
                 >
                   &lt;
                 </button>
@@ -432,14 +474,14 @@ export default function Solution() {
                               </div>
                             )}
                           </div>
-                          <h3 className="font-medium mb-2 text-lg">{product.name}</h3>
-                          <p className="font-bold mb-4 text-lg">{product.price}</p>
+                          <h3 className="font-medium mb-2 text-lg text-white">{product.name}</h3>
+                          <p className="font-bold mb-4 text-lg text-white">{product.price}</p>
                           <button 
                             onClick={() => handleWhatsAppClick(product)}
                             disabled={product.soldOut}
-                            className={`bg-deepBrown text-cream text-center px-6 py-3 rounded-full
+                            className={`bg-[#f1ad4e] text-black text-center px-6 py-3 rounded-full
                                      text-sm font-medium transition-all duration-300
-                                     hover:bg-earthBrown mt-auto ${product.soldOut ? 'opacity-50 cursor-not-allowed' : ''}`}
+                                     hover:bg-[#f1ad4e] mt-auto ${product.soldOut ? 'opacity-50 cursor-not-allowed' : ''}`}
                           >
                             Buy Now
                           </button>
@@ -451,7 +493,7 @@ export default function Solution() {
                 <button 
                   onClick={() => scrollRight(category, filteredProducts.length)}
                   disabled={currentIndex + (isMobile ? 1 : itemsPerPage) >= filteredProducts.length}
-                  className="bg-deepBrown text-cream px-4 py-2 rounded disabled:opacity-50 ml-2"
+                  className="bg-[#f1ad4e] text-white px-4 py-2 rounded disabled:opacity-50 ml-2"
                 >
                   &gt;
                 </button>
@@ -461,8 +503,8 @@ export default function Solution() {
         })}
       </div>
 
-      {/* Banner Section - Moved to bottom */}
-      <div className="relative w-full aspect-[21/9] mt-8">
+      {/* Banner Section - Full width */}
+      <div className="w-screen relative left-1/2 right-1/2 -mx-[50vw] aspect-[21/9] mt-8">
         {bannerImages.map((image, index) => (
           <div
             key={image}
@@ -473,7 +515,7 @@ export default function Solution() {
               src={image}
               alt={`Banner ${index + 1}`}
               fill
-              className="object-contain"
+              className="object-cover"
               priority={index === 0}
             />
           </div>

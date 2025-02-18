@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export default function CTA() {
   return (
-    <section className="relative min-h-screen flex items-center bg-cream px-4 sm:px-8 py-16 sm:py-24">
+    <section className="relative min-h-screen flex items-center bg-[#5f706d] px-4 sm:px-8 py-16 sm:py-24">
       {/* Top Divider */}
       <div className="absolute top-0 left-0 w-full border-t border-earthBrown/20"></div>
 
@@ -10,12 +10,12 @@ export default function CTA() {
         <div className="flex flex-col lg:flex-row gap-8 lg:gap-16 items-center">
           {/* Left Side Content */}
           <div className="w-full lg:w-3/5 space-y-6">
-            <h2 className="font-serif italic text-4xl sm:text-5xl lg:text-6xl font-normal text-deepBrown leading-tight">
+            <h2 className="font-serif italic text-4xl sm:text-5xl lg:text-6xl font-normal text-white leading-tight">
               Discover Our
               <span className="block">Batik Borneo Heritage</span>
             </h2>
 
-            <blockquote className="text-earthBrown text-xl sm:text-2xl italic font-serif mt-8">
+            <blockquote className="text-white text-xl sm:text-2xl italic font-serif mt-8">
               &quot;Embracing tradition through contemporary design. Every piece tells a story of Indonesian craftsmanship.&quot;
             </blockquote>
 
@@ -23,16 +23,16 @@ export default function CTA() {
               href="https://linktr.ee/iwatikbalikpapan"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-block bg-deepBrown text-cream 
+              className="inline-block bg-[#f1ad4e] text-black 
                        px-8 sm:px-12 py-3 sm:py-4 rounded-full 
                        text-base sm:text-lg font-medium mt-6 sm:mt-8 shadow-lg
-                       hover:bg-earthBrown transition-all duration-300
+                       hover:bg-[#f1ad4e] transition-all duration-300
                        w-[200px] sm:w-auto"
             >
               Explore Collection
             </a>
 
-            <p className="text-earthBrown text-xs sm:text-sm mt-3 sm:mt-4">
+            <p className="text-white text-xs sm:text-sm mt-3 sm:mt-4">
               Experience the art of batik - Visit our collection today
             </p>
           </div>
@@ -41,13 +41,13 @@ export default function CTA() {
           <div className="w-full lg:w-2/5">
             <div className="relative max-w-sm mx-auto">
               {/* Success Stats Overlay - Adjusted Size */}
-              <div className="absolute top-3 right-3 bg-cream px-2.5 py-1 rounded-lg shadow-lg z-10">
-                <p className="text-sm font-bold text-deepBrown">Custom</p>
-                <p className="text-xs text-earthBrown">Unique Designs</p>
+              <div className="absolute top-3 right-3 bg-[#5f706d] px-2.5 py-1 rounded-lg shadow-lg z-10">
+                <p className="text-sm font-bold text-white">Custom</p>
+                <p className="text-xs text-white">Unique Designs</p>
               </div>
-              <div className="absolute bottom-3 left-3 bg-cream px-2.5 py-1 rounded-lg shadow-lg z-10">
-                <p className="text-sm font-bold text-deepBrown">6+</p>
-                <p className="text-xs text-earthBrown">Years of Heritage</p>
+              <div className="absolute bottom-3 left-3 bg-[#5f706d] px-2.5 py-1 rounded-lg shadow-lg z-10">
+                <p className="text-sm font-bold text-white">6+</p>
+                <p className="text-xs text-white">Years of Heritage</p>
               </div>
               
               {/* Main Image - More Compact */}

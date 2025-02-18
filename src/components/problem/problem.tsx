@@ -15,20 +15,20 @@ export default function Problem() {
   ];
 
   return (
-    <section className="relative min-h-screen bg-cream py-24">
+    <section className="relative min-h-screen bg-[#5f706d] py-24">
       {/* Top Divider */}
       <div className="absolute top-0 left-0 w-full border-t border-earthBrown/20"></div>
 
       {/* Title Section */}
       <div className="max-w-7xl mx-auto px-8 mb-16">
-        <h2 className="text-4xl md:text-5xl font-bold text-deepBrown text-center">
+        <h2 className="text-4xl md:text-5xl font-bold text-white text-center">
           DISCOVER OUR COLLECTION
         </h2>
       </div>
 
       {/* Grid of Eight Images */}
-      <div className="max-w-8xl mx-auto px-4">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+      <div className="max-w-8xl mx-0">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-0">
           {collections.map((item, index) => (
             <div 
               key={index}
